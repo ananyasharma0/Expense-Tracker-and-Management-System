@@ -17,13 +17,14 @@
 !ExpenseTracker-Backend/**/src/test/**/build/
 
 ### Angular / Node ###
-/Project - Frontend/node_modules/
-/Project - Frontend/dist/
-/Project - Frontend/.angular/cache/
-/Project - Frontend/.angular/config.json
-/Project - Frontend/.angular/tmp/
-/Project - Frontend/.env
-/Project - Frontend/package-lock.json
+/Project - Frontend/expenseTrackerWeb/node_modules/
+/Project - Frontend/expenseTrackerWeb/dist/
+/Project - Frontend/expenseTrackerWeb/.angular/cache/
+/Project - Frontend/expenseTrackerWeb/.angular/config.json
+/Project - Frontend/expenseTrackerWeb/.angular/tmp/
+/Project - Frontend/expenseTrackerWeb/.env
+# Keeping package-lock.json is recommended for dependency consistency
+# /Project - Frontend/expenseTrackerWeb/package-lock.json
 
 ### IDEs ###
 # IntelliJ
