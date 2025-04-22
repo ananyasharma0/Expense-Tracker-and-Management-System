@@ -1,0 +1,156 @@
+.logo { 
+    display: flex; 
+    align-items: center; 
+    height: 60px; 
+    background: rgba(255, 255, 255, 0.2); 
+    margin: 16px; 
+    padding: 0 16px; 
+    color: white; 
+} 
+ 
+.avatar { 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    margin-right: 12px; 
+} 
+ 
+.user-info { 
+    display: flex; 
+    flex-direction: column; 
+} 
+ 
+.user-info strong { 
+    font-size: 16px;
+    color: white; 
+} 
+ 
+.layout { 
+    min-height: 100vh; 
+} 
+ 
+nz-sider { 
+    overflow: auto; 
+    height: 100%; 
+    position: fixed; 
+    left: 0;
+    background-color: #041529; /* Darker background as shown in your screenshot */
+    width: 200px !important;
+    max-width: 200px !important;
+    min-width: 200px !important;
+} 
+
+/* Menu styling */
+[nz-menu] {
+    background-color: transparent !important;
+    padding: 16px 0;
+}
+
+[nz-menu-item] {
+    color: rgba(255, 255, 255, 0.65) !important;
+    padding: 12px 24px !important;
+    margin: 8px 0 !important;
+    transition: all 0.3s ease !important;
+    height: auto !important;
+    line-height: 1.5 !important;
+    position: relative;
+}
+
+[nz-menu-item]:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #1890ff !important;
+}
+
+/* CSS-based icons for menu items */
+li[nz-menu-item][routerLink="/"]:before {
+    content: "📊";
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+li[nz-menu-item][routerLink="/income"]:before {
+    content: "💰";
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+li[nz-menu-item][routerLink="/expense"]:before {
+    content: "💸";
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Create space for the icon if it's not visible */
+[nz-icon] {
+    margin-right: 10px !important;
+    font-size: 16px !important;
+    color: rgba(255, 255, 255, 0.65) !important;
+    transition: color 0.3s ease !important;
+}
+
+/* Active/selected item styling */
+[nz-menu-item].ant-menu-item-selected {
+    background-color: #1890ff !important;
+    color: white !important;
+}
+
+[nz-menu-item].ant-menu-item-selected:before {
+    color: white !important;
+}
+ 
+.right-layout { 
+    margin-left: 200px; 
+} 
+ 
+nz-header { 
+    padding: 0; 
+    height: 75px; 
+} 
+ 
+nz-content { 
+    margin: 24px 16px 0; 
+    overflow: initial; 
+} 
+ 
+.inner-content { 
+    padding: 24px; 
+    background: white; 
+    text-align: center;
+    color: #000;
+    min-height: 280px;
+} 
+ 
+nz-footer { 
+    text-align: center; 
+}
+
+/* Fix for any list styling issues */
+ul[nz-menu] {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Additional styling for menu items to match your screenshot */
+[nz-menu-item] span {
+    color: rgba(255, 255, 255, 0.65) !important;
+}
+
+[nz-menu-item]:hover span {
+    color: #1890ff !important;
+}
+
+[nz-menu-item].ant-menu-item-selected span {
+    color: white !important;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 992px) {
+    .right-layout {
+        margin-left: 0;
+    }
+    
+    nz-sider {
+        position: relative;
+        height: auto;
+    }
+}
