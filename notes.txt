@@ -1,1 +1,0 @@
-to run backend server : ./mvnw spring-boot:run
