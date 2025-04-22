@@ -1,0 +1,77 @@
+<div>
+    <div nz-row [nzGutter]="16">
+      <!-- Left Card (Create Budget) -->
+      <div nz-col nzFlex="8">
+        <nz-card nzType="inner" style="margin-top: 16px;" nzTitle="Create Budget">
+          <form nz-form [formGroup]="budgetForm" (ngSubmit)="submitForm()" class="custom-form">
+  
+            <nz-form-item>
+              <nz-form-label>Category</nz-form-label>
+              <nz-form-control nzErrorTip="Please select a category">
+                <nz-select nzAllowClear nzPlaceHolder="Select category" formControlName="category">
+                  <nz-option *ngFor="let category of listOfCategory" [nzLabel]="category" [nzValue]="category">
+                  </nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+  
+            <nz-form-item>
+              <nz-form-label>Amount</nz-form-label>
+              <nz-form-control nzErrorTip="Please enter amount">
+                <input type="number" nz-input formControlName="amount" placeholder="Enter budget amount" />
+              </nz-form-control>
+            </nz-form-item>
+  
+            <nz-form-item>
+              <nz-form-label>Period</nz-form-label>
+              <nz-form-control nzErrorTip="Please select a period">
+                <nz-select nzPlaceHolder="Select period" formControlName="period">
+                  <nz-option nzValue="monthly" nzLabel="Monthly"></nz-option>
+                  <nz-option nzValue="yearly" nzLabel="Yearly"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+  
+            <nz-form-item>
+              <nz-form-label>Start Date</nz-form-label>
+              <nz-form-control nzErrorTip="Please pick a start date">
+                <nz-date-picker style="width: 100%" formControlName="startDate"></nz-date-picker>
+              </nz-form-control>
+            </nz-form-item>
+  
+            <nz-form-item>
+              <nz-form-label>End Date</nz-form-label>
+              <nz-form-control nzErrorTip="Please pick an end date">
+                <nz-date-picker style="width: 100%" formControlName="endDate"></nz-date-picker>
+              </nz-form-control>
+            </nz-form-item>
+  
+            <button nz-button nzType="primary" nzBlock [disabled]="!budgetForm.valid">
+              Create Budget
+            </button>
+  
+          </form>
+        </nz-card>
+      </div>
+  
+      <!-- Right Card (Budgets List) -->
+       <div nz-col nzFlex="10">
+        <nz-card nzType="inner" style="margin-top: 16px;" nzTitle="Your Budgets">
+          <div nz-card-grid style="width: 100%;" *ngFor="let budget of budgets">
+            <div nz-row>
+              <div nz-col nzSpan="20">
+                <span nz-icon nzType="wallet" nzTheme="outline"></span> {{budget.category}} -
+                <span nz-icon nzType="dollar" nzTheme="outline"></span> {{budget.amount}} -
+                <span nz-icon nzType="calendar" nzTheme="outline"></span> {{budget.period}} ({{budget.startDate}} to {{budget.endDate}})
+              </div>
+              <div nz-col nzSpan="4" style="font-size: 15px;">
+                <span nz-icon nzType="edit" nzTheme="fill" style="color:blue;" (click)="updateBudget(budget.id)"></span>
+                <span nz-icon nzType="delete" nzTheme="fill" style="color:red; margin-left: 12px;" (click)="deleteBudget(budget.id)"></span>
+              </div>
+            </div>
+          </div>
+        </nz-card> 
+       </div>
+    </div>
+  </div>
+  

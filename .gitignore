@@ -1,0 +1,62 @@
+### Java / Maven / Spring Boot ###
+/ExpenseTracker-Backend/target/
+/ExpenseTracker-Backend/build/
+/ExpenseTracker-Backend/out/
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+*.log
+*.class
+
+# If you have local .env files or config files
+/ExpenseTracker-Backend/.env
+
+# Ignore generated sources except inside src/main or src/test
+!ExpenseTracker-Backend/**/src/main/**/target/
+!ExpenseTracker-Backend/**/src/test/**/target/
+!ExpenseTracker-Backend/**/src/main/**/build/
+!ExpenseTracker-Backend/**/src/test/**/build/
+
+### Angular / Node ###
+/Project - Frontend/node_modules/
+/Project - Frontend/dist/
+/Project - Frontend/.angular/cache/
+/Project - Frontend/.angular/config.json
+/Project - Frontend/.angular/tmp/
+/Project - Frontend/.env
+/Project - Frontend/package-lock.json
+
+### IDEs ###
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse / STS
+.project
+.classpath
+.settings/
+.springBeans
+.apt_generated/
+.factorypath
+.sts4-cache/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+### OS Files ###
+.DS_Store
+Thumbs.db
+
+### Others ###
+.env
+*.bak
+*.tmp
+*.swp
